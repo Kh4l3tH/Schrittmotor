@@ -39,7 +39,7 @@ class Schrittmotor():
         self.cmd.setRamp(ramp)
         self.cmd.setBrakeRamp(ramp)
         # self.cmd.setStepMode(schrittmodus)
-        assert self.cmd.getStepMode() == schrittmodus, 'Falscher Schrittmodus für Motor {0}!\nSoll: {1}\nIst: {2}'.format(self.id, self.schrittmodus, cmd.getStepMode())
+        assert self.cmd.getStepMode() == schrittmodus, 'Falscher Schrittmodus für Motor {0}!\nSoll: {1}\nIst: {2}'.format(self.id, schrittmodus, cmd.getStepMode())
 
     def reset_position(self):
         self.cmd.setMotor(self.id)
