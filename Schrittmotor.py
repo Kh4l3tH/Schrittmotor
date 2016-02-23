@@ -4,15 +4,6 @@ from time import sleep
 from time import time
 
 
-class Koordinatensystem():
-    def __init__(self, config, ks):
-        self.name = ks
-        self.x_offset = config.getfloat(ks, 'x_offset')
-        self.x_inverted = config.getboolean(ks, 'x_inverted')
-        self.z_offset = config.getfloat(ks, 'z_offset')
-        self.z_inverted = config.getboolean(ks, 'z_inverted')
-
-
 class Schrittmotor():
     def __init__(self, cmd, id, schritte, schrittmodus, steigung, rampentyp, rampe_hz_pro_ms,
         reference_pin=None, umin_default=None, offset=0, inverted=False):
