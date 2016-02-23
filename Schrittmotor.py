@@ -25,7 +25,7 @@ class Schrittmotor():
         elif rampentyp.lower() == 'jerk_free':
             self.cmd.setRampType(JERK_FREE)
         else:
-            raise 'Rampentyp unterstuetzt trapez, sinus und jerk_free'
+            raise 'Rampentyp unterstuetzt Trapez, Sinus und Jerk_Free'
         ramp = int((3000 / (rampe_hz_pro_ms+11.7)) ** 2)
         self.cmd.setRamp(ramp)
         self.cmd.setBrakeRamp(ramp)
